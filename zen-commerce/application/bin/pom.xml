@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+<<<<<<< HEAD
+
+	<groupId>com.zensar</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<artifactId>application</artifactId>
+	<name>application</name>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.0.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Start: Custom module dependency added -->
+		<dependency>
+			<groupId>com.zensar</groupId>
+			<artifactId>cart-services</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.zensar</groupId>
+			<artifactId>browse-shop</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- End: Custom module dependency added -->
+
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+			<scope>compile</scope>
+		</dependency>
+=======
+	
+	<groupId>com.zensar</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<artifactId>application</artifactId>
+	<name>application</name>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.0.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- Start: Custom module dependency added -->
+		<dependency>
+			<groupId>com.zensar</groupId>
+			<artifactId>cart-services</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.zensar</groupId>
+			<artifactId>browse-shop</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- End: Custom module dependency added -->
+
+>>>>>>> branch 'master' of https://github.com/s713278/ECommerce
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
