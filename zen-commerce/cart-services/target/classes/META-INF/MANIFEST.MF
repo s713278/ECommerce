@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: cart-services
+Implementation-Version: 1.0
+Built-By: SK46803
+Implementation-Vendor-Id: com.zensar
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/cart-services
+Created-By: Maven Integration for Eclipse
+
