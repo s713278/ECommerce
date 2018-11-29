@@ -7,7 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Zensar-Commerce parent module</name>
+  <name>Zensar-Commerce online ecommerce reference store</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

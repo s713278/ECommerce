@@ -13,6 +13,10 @@ import com.zensar.browse.dto.Product;
 import com.zensar.browse.facade.ProductFacade;
 import com.zensar.browse.service.ProductService;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -32,6 +36,13 @@ public class ProductController {
     
     @GetMapping(value = { "", "/{productId}" })
     @ResponseBody
+    @ApiOperation(value = "getProduct", nickname = "getProduct")
+    @ApiResponses(value = { 
+            @ApiResponse(code = 200, message = "Success", response = Product.class),
+            @ApiResponse(code = 401, message = "Unauthorized"),
+            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 404, message = "Not Found"),
+            @ApiResponse(code = 500, message = "Failure")}) 
     public Product getProduct(@PathVariable long productId) {
     	return productFacade.getProduct(productId);
     }
