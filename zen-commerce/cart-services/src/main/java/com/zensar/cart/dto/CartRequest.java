@@ -1,4 +1,4 @@
-package com.zensar.cart.request;
+package com.zensar.cart.dto;
 
 public class CartRequest {
 
