@@ -5,8 +5,8 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.zensar.browse.dao.ProductDao;
 import com.zensar.browse.dto.Product;
-import com.zensar.browse.repository.ProductRepository;
 import com.zensar.browse.service.ProductService;
 
 @Service
@@ -16,7 +16,7 @@ public class ProductServiceImpl implements ProductService {
     // productRepository constructor injection
  
 	@Autowired
-	ProductRepository productRepository;
+	ProductDao productRepository;
 
 	public Iterable<Product> getAllProducts() {
 		return productRepository.findAll();

@@ -2,14 +2,14 @@ package com.zensar.browse.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.zensar.browse.dao.SkuDao;
 import com.zensar.browse.dto.Sku;
-import com.zensar.browse.repository.SkuRepository;
 import com.zensar.browse.service.SkuService;
 
 public class SkuServiceImpl implements SkuService {
 
 	@Autowired
-	SkuRepository skuRepository;
+	SkuDao skuRepository;
 	
 	@Override
 	public Iterable<Sku> getAllSkus() {
