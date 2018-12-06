@@ -1,5 +1,8 @@
 package com.zensar.browse.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +16,12 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	ProductDao productRepository;
 
-	public Iterable<Product> getAllProducts() {
-		return productRepository.findAll();
+	public List<Product> getAllProducts() {
+		List<Product> mutableList = new ArrayList<>();
+		for (Product p : productRepository.findAll()) {
+			mutableList.add(p);
+		}
+		return mutableList;
 	}
 
 	public Product getProduct(long id) {

@@ -1,10 +1,12 @@
 package com.zensar.browse.service;
 
+import java.util.List;
+
 import com.zensar.browse.dto.Product;
 
 public interface ProductService {
 
-	Iterable<Product> getAllProducts();
+	List<Product> getAllProducts();
 
 	Product getProduct(long id);
 

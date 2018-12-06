@@ -1,8 +1,9 @@
 package com.zensar.browse.controller;
 
-import javax.validation.constraints.NotNull;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,13 +27,12 @@ public class ProductController {
  
     // productService constructor injection
  
-    @GetMapping("/all")
-    public @NotNull Iterable<Product> getProducts() {
+    @GetMapping(produces={MediaType.APPLICATION_JSON_VALUE} ,value="/all")
+    public @ResponseBody List<Product> getProducts() {
         return productFacade.getAllProducts();
     }
     
     @GetMapping("/{productId}")
-    @ResponseBody
     @ApiOperation(value = "getProduct", nickname = "Get product by Id")
     @ApiResponses(value = { 
             @ApiResponse(code = 200, message = "Success", response = Product.class),
@@ -40,7 +40,7 @@ public class ProductController {
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 404, message = "Not Found"),
             @ApiResponse(code = 500, message = "Failure")}) 
-    public Product getProduct(@PathVariable long productId) {
+    public @ResponseBody Product getProduct(@PathVariable long productId) {
     	return productFacade.getProduct(productId);
     }
     

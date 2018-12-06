@@ -1,5 +1,7 @@
 package com.zensar.browse.facade;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.zensar.browse.dto.Product;
@@ -16,7 +18,7 @@ public class ProductFacadeImpl implements ProductFacade {
 	}
 
 	@Override
-	public Iterable<Product> getAllProducts() {
+	public List<Product> getAllProducts() {
 		return productService.getAllProducts();
 	}
 
