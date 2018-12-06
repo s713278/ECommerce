@@ -19,5 +19,6 @@
   	<module>browse-shop</module>
   	<module>checkout</module>
   	<module>config-server</module>
+  	<module>web-store</module>
   </modules>
 </project>
