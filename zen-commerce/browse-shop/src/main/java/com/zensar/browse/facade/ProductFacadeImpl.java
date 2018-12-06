@@ -15,4 +15,16 @@ public class ProductFacadeImpl implements ProductFacade {
 		return productService.getProduct(id);
 	}
 
+	@Override
+	public Iterable<Product> getAllProducts() {
+		return productService.getAllProducts();
+	}
+
+	@Override
+	public Product save(Product product) {
+		return productService.save(product);
+	}
+	
+	
+
 }
