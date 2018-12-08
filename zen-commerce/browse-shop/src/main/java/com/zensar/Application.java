@@ -2,10 +2,12 @@
 package com.zensar;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages={"com","com.zensar.browse.controller"})
+@ComponentScan(basePackages={"com","com.zensar.browse.controller","com.zensar.discovery.controller"})
+@EnableEurekaClient	
 public class Application {
 
     public static void main(String[] args) {
