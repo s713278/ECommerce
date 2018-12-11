@@ -1,10 +1,12 @@
 package com.zensar.browse.service;
 
+import java.util.List;
+
 import com.zensar.browse.dto.Category;
 
 public interface CategoryService {
 
-	Iterable<Category> getAllCategories();
+	List<Category> getAllCategories();
 
 	Category getCategory(long id);
 

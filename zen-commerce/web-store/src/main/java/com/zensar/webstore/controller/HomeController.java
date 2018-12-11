@@ -17,13 +17,15 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class HomeController {
 
+	private static final String ALL_CATEGORIES_URL = "http://localhost:8080/api/category/all";
 	private static final String ALL_PRODUCTS_URL = "http://localhost:8080/api/product/all";
+	private static final String ALL_SKUS_URL = "http://localhost:8080/api/product/all";
 	
 	@Autowired
 	RestTemplate restTemplate;
 
 	@GetMapping("/home")
-	public String getHomePage(ModelMap model ) {
+	public String getHomePage(ModelMap model) {
 		System.out.println("###############################");
 		HttpHeaders headers = new HttpHeaders();
 
@@ -38,8 +40,8 @@ public class HomeController {
 		RestTemplate restTemplate = new RestTemplate();
 
 		// Send request with GET method and default Headers.
-		ResponseEntity<List> result = restTemplate.exchange(ALL_PRODUCTS_URL, HttpMethod.GET, entity, List.class);
-		model.put("allProducts", result.getBody());
+		ResponseEntity<List> result = restTemplate.exchange(ALL_CATEGORIES_URL, HttpMethod.GET, entity, List.class);
+		model.put("allCategories", result.getBody());
 		System.out.println("######################################---------"+result.getBody());
 		return "home";
 	}

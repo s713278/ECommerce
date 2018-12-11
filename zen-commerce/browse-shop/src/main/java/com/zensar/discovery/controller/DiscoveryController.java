@@ -6,7 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.netflix.discovery.EurekaClient;
 import com.netflix.discovery.shared.Applications;
-
+/**
+ * Its for getting all the services 
+ * @author Mahi
+ *
+ */
 @RestController
 public class DiscoveryController {
 

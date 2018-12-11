@@ -1,5 +1,8 @@
 package com.zensar.browse.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.zensar.browse.dao.CategoryDao;
@@ -12,8 +15,12 @@ public class CategoryServiceImpl implements CategoryService {
 	private CategoryDao categoryRepository;
 	
 	@Override
-	public Iterable<Category> getAllCategories() {
-		return categoryRepository.findAll();
+	public List<Category> getAllCategories() {
+		List<Category> mutableList = new ArrayList<>();
+		for (Category p : categoryRepository.findAll()) {
+			mutableList.add(p);
+		}
+		return mutableList;
 	}
 
 	@Override

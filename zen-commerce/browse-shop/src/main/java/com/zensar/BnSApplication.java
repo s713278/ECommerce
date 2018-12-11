@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages={"com","com.zensar.browse.controller","com.zensar.discovery.controller"})
 @EnableEurekaClient	
-public class Application {
+public class BnSApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(BnSApplication.class, args);
     }
     
 }

@@ -61,6 +61,14 @@ public class Category {
 	public String toString() {
 		return super.toString();
 	}
+
+	public List<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
  
     // all arguments contructor 
     // standard getters and setters

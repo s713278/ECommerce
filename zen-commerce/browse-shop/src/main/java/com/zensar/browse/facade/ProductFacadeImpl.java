@@ -4,13 +4,24 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.zensar.browse.dto.Category;
 import com.zensar.browse.dto.Product;
+import com.zensar.browse.dto.Sku;
+import com.zensar.browse.service.CategoryService;
 import com.zensar.browse.service.ProductService;
+import com.zensar.browse.service.SkuService;
 
 public class ProductFacadeImpl implements ProductFacade {
 
 	@Autowired
-	ProductService productService;
+	private ProductService productService;
+	
+	@Autowired
+	private CategoryService categoryService;
+
+	@Autowired
+	private SkuService skuService;
+	
 	
 	@Override
 	public Product getProduct(long id) {
@@ -26,7 +37,25 @@ public class ProductFacadeImpl implements ProductFacade {
 	public Product save(Product product) {
 		return productService.save(product);
 	}
-	
-	
 
+	@Override
+	public List<Category> getAllCategories() {
+		return categoryService.getAllCategories();
+	}
+
+	@Override
+	public Category getCategory(long categoryId) {
+		return categoryService.getCategory(categoryId);
+	}
+	
+	@Override
+	public Sku getSku(long id){
+		return skuService.getSku(id);
+	}
+
+	@Override
+	public Category save(Category category) {
+		return categoryService.save(category);
+	}
+	
 }

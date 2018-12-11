@@ -1,5 +1,8 @@
 package com.zensar.browse.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.zensar.browse.dao.SkuDao;
@@ -12,8 +15,12 @@ public class SkuServiceImpl implements SkuService {
 	SkuDao skuRepository;
 	
 	@Override
-	public Iterable<Sku> getAllSkus() {
-		return skuRepository.findAll();
+	public List<Sku> getAllSkus() {
+		List<Sku> mutableList = new ArrayList<>();
+		for (Sku p : skuRepository.findAll()) {
+			mutableList.add(p);
+		}
+		return mutableList;
 	}
 
 	@Override
