@@ -6,6 +6,11 @@ import com.zensar.browse.dto.Category;
 import com.zensar.browse.dto.Product;
 import com.zensar.browse.dto.Sku;
 
+/**
+ * 
+ * @author Swamy Kunta
+ *
+ */
 public interface ProductFacade {
 
 	Product getProduct(long id);

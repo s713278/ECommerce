@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.zensar.browse.dao.SkuDao;
 import com.zensar.browse.dto.Sku;
 import com.zensar.browse.service.SkuService;
 
+@Service
 public class SkuServiceImpl implements SkuService {
 
 	@Autowired

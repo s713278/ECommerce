@@ -15,8 +15,8 @@
 
 
   <modules>
-  	<module>cart-services</module>
   	<module>browse-shop</module>
+  	<module>cart-services</module>
   	<module>checkout</module>
   	<module>config-server</module>
   	<module>web-store</module>
