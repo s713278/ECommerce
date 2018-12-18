@@ -57,5 +57,10 @@ public class ProductFacadeImpl implements ProductFacade {
 	public Category save(Category category) {
 		return categoryService.save(category);
 	}
+
+	@Override
+	public List<Product> findByNameContaining(String productName, int pageNo, int pageSize) {
+		return productService.findByNameContaining(productName, pageNo, pageSize);
+	}
 	
 }

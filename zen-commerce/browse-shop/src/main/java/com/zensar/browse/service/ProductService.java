@@ -12,4 +12,6 @@ public interface ProductService {
 
 	Product save(Product product);
 	
+	List<Product> findByNameContaining(String name,int pageNo,int pageSize);
+	
 }

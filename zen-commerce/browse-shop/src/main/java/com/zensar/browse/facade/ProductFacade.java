@@ -26,4 +26,6 @@ public interface ProductFacade {
 	Sku getSku(long id);
 
 	Category save(Category category);
+	
+	List<Product> findByNameContaining(String productName, int pageNo, int pageSize);
 }

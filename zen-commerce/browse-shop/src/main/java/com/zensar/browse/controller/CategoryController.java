@@ -54,4 +54,11 @@ public class CategoryController {
     public @ResponseBody Category saveCategory(@RequestBody Category category){
     	return productFacade.save(category);
     }
+    
+    @GetMapping(value="/search/{searchKey}")
+    public @ResponseBody List<Product> findByProductNameContaining(@PathVariable String searchKey){
+    
+    	return productFacade.findByNameContaining(searchKey, 1, 10);
+    }
+    
 }

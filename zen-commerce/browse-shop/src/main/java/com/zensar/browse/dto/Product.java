@@ -9,12 +9,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="PRODUCT")
+@NamedQuery(name = "Product.fetchByNameContains",
+query = "SELECT e FROM Product e WHERE e.name =:name "
+)
 public class Product {
  
     @Id

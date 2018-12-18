@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.zensar.browse.dao.ProductDao;
@@ -33,6 +36,13 @@ public class ProductServiceImpl implements ProductService {
 
 	public Product save(Product product) {
 		return productRepository.save(product);
+	}
+
+	
+	@Override
+	public List<Product> findByNameContaining(String productName, int pageNo, int pageSize) {
+		PageRequest pageRequest = PageRequest.of(pageNo,pageSize,Direction.ASC,"name");
+		return productRepository.findByNameContaining(productName,pageRequest);
 	}
 	   
 }
