@@ -8,7 +8,7 @@ public interface SkuService {
 
 	List<Sku> getAllSkus();
 
-	Sku getSku(long id);
+	Sku getSku(String id);
 
 	Sku save(Sku sku);
 

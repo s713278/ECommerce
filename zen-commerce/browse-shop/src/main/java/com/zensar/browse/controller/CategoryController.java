@@ -3,6 +3,8 @@ package com.zensar.browse.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,8 +31,9 @@ public class CategoryController {
     // productService constructor injection
  
     @GetMapping(produces={MediaType.APPLICATION_JSON_VALUE} ,value="/all")
-    public @ResponseBody List<Category> getCategories() {
-        return productFacade.getAllCategories();
+    public @ResponseBody Page<Category> getCategories() {
+    	Pageable pageable= Pageable.unpaged();
+        return productFacade.getAllCategories(pageable);
     }
     
     @GetMapping("/{categoryId}")
@@ -57,7 +60,6 @@ public class CategoryController {
     
     @GetMapping(value="/search/{searchKey}")
     public @ResponseBody List<Product> findByProductNameContaining(@PathVariable String searchKey){
-    
     	return productFacade.findByNameContaining(searchKey, 1, 10);
     }
     

@@ -2,6 +2,9 @@ package com.zensar.browse.facade;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import com.zensar.browse.dto.Category;
 import com.zensar.browse.dto.Product;
 import com.zensar.browse.dto.Sku;
@@ -19,13 +22,13 @@ public interface ProductFacade {
 
 	Product save(Product product);
 
-	List<Category> getAllCategories();
-
 	Category getCategory(long categoryId);
 
-	Sku getSku(long id);
+	Sku getSku(String id);
 
 	Category save(Category category);
 	
 	List<Product> findByNameContaining(String productName, int pageNo, int pageSize);
+
+	Page<Category> getAllCategories(Pageable pageable);
 }

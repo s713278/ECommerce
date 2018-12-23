@@ -1,9 +1,10 @@
 package com.zensar.browse.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.zensar.browse.dao.CategoryDao;
@@ -15,16 +16,9 @@ public class CategoryServiceImpl implements CategoryService {
 
 	@Autowired
 	private CategoryDao categoryRepository;
+	private int pageNumber =1;
+	private int PAGESIZE =25;
 	
-	@Override
-	public List<Category> getAllCategories() {
-		List<Category> mutableList = new ArrayList<>();
-		for (Category p : categoryRepository.findAll()) {
-			mutableList.add(p);
-		}
-		return mutableList;
-	}
-
 	@Override
 	public Category getCategory(long id) {
 		return categoryRepository.findById(id).get();
@@ -35,4 +29,9 @@ public class CategoryServiceImpl implements CategoryService {
 		return categoryRepository.save(category);
 	}
 
+	@Override
+	public Page<Category> getAllCategories(Pageable pageable) {
+		PageRequest request = PageRequest.of(pageable.getPageNumber()  - 1, pageable.getPageSize(), Sort.Direction.ASC, "id");
+		return categoryRepository.findAll(request);
+	}
 }

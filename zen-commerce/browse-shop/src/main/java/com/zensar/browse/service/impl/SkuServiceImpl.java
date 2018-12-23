@@ -26,7 +26,7 @@ public class SkuServiceImpl implements SkuService {
 	}
 
 	@Override
-	public Sku getSku(long id) {
+	public Sku getSku(String id) {
 		return skuRepository.findById(id).get();
 	}
 

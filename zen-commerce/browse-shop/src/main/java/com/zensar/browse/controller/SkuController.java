@@ -31,7 +31,7 @@ public class SkuController {
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 404, message = "Not Found"),
             @ApiResponse(code = 500, message = "Failure")}) 
-    public @ResponseBody Sku getSKu(@PathVariable long skuId) {
+    public @ResponseBody Sku getSKu(@PathVariable String skuId) {
     	return productFacade.getSku(skuId);
     }
 }

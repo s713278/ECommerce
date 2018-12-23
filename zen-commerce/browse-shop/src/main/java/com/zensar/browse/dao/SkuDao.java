@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.zensar.browse.dto.Sku;
 
-public interface SkuDao extends CrudRepository<Sku, Long>  {
+public interface SkuDao extends CrudRepository<Sku, String>  {
 	List<Sku> findAll(Sort sort);
 }

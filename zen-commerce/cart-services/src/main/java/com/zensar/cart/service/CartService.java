@@ -1,7 +1,7 @@
 package com.zensar.cart.service;
 
-import com.zensar.cart.dto.CartRequest;
-import com.zensar.cart.dto.CartResponse;
+import com.zensar.cart.vo.CartRequest;
+import com.zensar.cart.vo.CartResponse;
 
 public interface CartService {
 
@@ -10,4 +10,8 @@ public interface CartService {
 	public CartResponse removeItem(CartRequest request );
 	
 	public CartResponse updateItem(CartRequest request );
+
+	public CartResponse getCart(String cartId);
+	
+	Iterable<CartResponse> findAll();
 }
