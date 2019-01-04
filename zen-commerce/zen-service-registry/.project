@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>zen-service-registry</name>
+	<name>zen-eureka-server</name>
 	<comment></comment>
 	<projects>
 	</projects>
