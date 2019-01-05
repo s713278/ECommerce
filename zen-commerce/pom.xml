@@ -17,8 +17,8 @@
   <modules>
   	<module>browse-shop</module>
   	<module>cart-services</module>
-  	<module>config-server</module>
+  	<module>zen-cloud-config-server</module>
   	<module>web-store</module>
-    <module>zen-service-registry</module>
+    <module>zen-eureka-server</module>
   </modules>
 </project>
