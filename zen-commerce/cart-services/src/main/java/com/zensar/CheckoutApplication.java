@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages={"com","com.zensar.cart.controller","com.zensar.checkout.controller"})
+@ComponentScan("com.zensar")
 public class CheckoutApplication {
 
 	public static void main(String[] args) {

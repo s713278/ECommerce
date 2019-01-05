@@ -10,18 +10,20 @@ import org.springframework.scheduling.annotation.Scheduled;
 import com.zensar.browse.service.CategoryService;
 
 @SpringBootApplication
-@ComponentScan(basePackages={"com","com.zensar.browse.controller","com.zensar.discovery.controller"})
+@ComponentScan("com.zensar")
 @EnableEurekaClient
 //@EnableScheduling
 public class BnSApplication {
 
     public static void main(String[] args) {
     	 ConfigurableApplicationContext context= SpringApplication.run(BnSApplication.class, args);
-    	CategoryService categoryService = context.getBean("ategoryService",CategoryService.class);
+    	CategoryService categoryService = context.getBean("categoryService",CategoryService.class);
     }
     
     @Scheduled(fixedDelay =1000)
     public static void m1() {
     	System.out.println("#######################"+System.currentTimeMillis());
     }
+    
+
 }

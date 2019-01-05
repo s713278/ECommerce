@@ -32,7 +32,7 @@ public class ProductController {
         return productFacade.getAllProducts();
     }
     
-    @GetMapping("/{productId}")
+    @GetMapping(produces={MediaType.APPLICATION_JSON_VALUE},value="/{productId}")
     @ApiOperation(value = "getProduct", nickname = "Get product by Id")
     @ApiResponses(value = { 
             @ApiResponse(code = 200, message = "Success", response = Product.class),

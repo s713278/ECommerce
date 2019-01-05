@@ -30,5 +30,5 @@ public interface ProductFacade {
 	
 	List<Product> findByNameContaining(String productName, int pageNo, int pageSize);
 
-	Page<Category> getAllCategories(Pageable pageable);
+	List<Category> getAllCategories(Pageable pageable);
 }

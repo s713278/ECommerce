@@ -1,14 +1,13 @@
 package com.zensar.browse.service.impl;
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.zensar.browse.dao.CategoryDao;
@@ -38,9 +37,8 @@ public class CategoryServiceImpl implements CategoryService {
 	}
 
 	@Override
-	public Page<Category> getAllCategories(Pageable pageable) {
-		PageRequest request = PageRequest.of(pageable.getPageNumber()  - 1, pageable.getPageSize(), Sort.Direction.ASC, "id");
-		return categoryRepository.findAll(request);
+	public List<Category> getAllCategories(Pageable pageable) {
+		return categoryRepository.findAll(pageable).getContent();
 	}
 	
 	@PostConstruct

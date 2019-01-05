@@ -61,6 +61,15 @@
 		<!-- Start: Adding other module dependency <dependency> <groupId>com.zensar</groupId> 
 			<artifactId>browse-shop</artifactId> <version>${zenVersion}</version> </dependency> 
 			End: Adding other module dependency -->
+			
+		<!-- Adding custom dependency -->
+		<dependency>
+			<groupId>com.zensar</groupId>
+			<artifactId>browse-shop</artifactId>
+			<version>1.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- Adding custom dependency -->
 	</dependencies>
 
 	<build>

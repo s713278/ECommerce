@@ -31,13 +31,11 @@ public class HomeController {
 
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		// Request to return JSON format
-		headers.setContentType(MediaType.APPLICATION_JSON);
-		headers.set("my_other_key", "my_other_value");
+		//headers.setContentType(MediaType.APPLICATION_JSON);
+		//headers.set("my_other_key", "my_other_value");
 
 		// HttpEntity<String>: To get result as String.
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
-
-		RestTemplate restTemplate = new RestTemplate();
 
 		// Send request with GET method and default Headers.
 		ResponseEntity<List> result = restTemplate.exchange(ALL_CATEGORIES_URL, HttpMethod.GET, entity, List.class);

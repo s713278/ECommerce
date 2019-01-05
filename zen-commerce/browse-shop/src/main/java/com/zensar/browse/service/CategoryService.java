@@ -1,6 +1,7 @@
 package com.zensar.browse.service;
 
-import org.springframework.data.domain.Page;
+import java.util.List;
+
 import org.springframework.data.domain.Pageable;
 
 import com.zensar.browse.dto.Category;
@@ -12,6 +13,6 @@ public interface CategoryService {
 
 	Category save(Category product);
 
-	Page<Category> getAllCategories(Pageable pageable);
+	List<Category> getAllCategories(Pageable pageable);
 
 }

@@ -3,7 +3,6 @@ package com.zensar.browse.facade;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.zensar.browse.dto.Category;
@@ -41,7 +40,7 @@ public class ProductFacadeImpl implements ProductFacade {
 	}
 
 	@Override
-	public Page<Category> getAllCategories(Pageable pageable) {
+	public List<Category> getAllCategories(Pageable pageable) {
 		return categoryService.getAllCategories(pageable);
 	}
 

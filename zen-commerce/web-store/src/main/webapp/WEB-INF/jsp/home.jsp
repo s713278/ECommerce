@@ -8,14 +8,24 @@
 <title>Home Page</title>
 </head>
 <body>
-	<h1>Home Page</h1>
 	<c:forEach var="category" items="${allCategories}">
-	<b>${category.name}</b>
-		<ul>
+	<h3>${category.name}</h3>
 		<c:forEach var="product" items="${category.products}">
-			<li><a href="/api/product/${product.id}">${product.name}</a></li>
+			<table border=1 width="35%">
+				<tr>
+					<th colspan="3">
+						<a href="/api/product/${product.id}">${product.name}</a>
+					</th>
+				</tr>
+				<c:forEach var="sku" items="${product.skus}">
+					<tr>
+						<td>${sku.name}  </td>
+						<td></td>
+						<td>${sku.price} </td>
+					</tr>
+				</c:forEach>
+			</table>
 		</c:forEach>
-		</ul>
 	</c:forEach>
 </body>
 </html>
