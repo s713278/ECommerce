@@ -2,6 +2,8 @@ package com.zensar.browse.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.MediaType;
@@ -24,6 +26,8 @@ import io.swagger.annotations.ApiResponses;
 @RequestMapping("/api/category")
 public class CategoryController {
 	
+	private static final Logger LOGGER = 	LoggerFactory.getLogger(CategoryController.class);
+	 
 	@Autowired
 	private ProductFacade productFacade;
  
@@ -32,9 +36,10 @@ public class CategoryController {
     @GetMapping(produces={MediaType.APPLICATION_JSON_VALUE} ,value="/all")
     public @ResponseBody List<Category> getCategories() {
     	//PageRequest request = PageRequest.of(pageable.getPageNumber()  - 1, pageable.getPageSize(), Sort.Direction.ASC, "id");
+    	LOGGER.debug("Start getCategories();");
     	PageRequest request = PageRequest.of(0, 20);
     	List<Category> rootCategories = productFacade.getAllCategories(request);
-    	System.out.println("CategoryController rootCategories >>>> "+rootCategories);
+    	LOGGER.debug("End getCategories();");
         return rootCategories;
     }
     

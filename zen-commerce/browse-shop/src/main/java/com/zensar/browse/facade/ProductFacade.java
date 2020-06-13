@@ -2,7 +2,6 @@ package com.zensar.browse.facade;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.zensar.browse.dto.Category;
