@@ -28,13 +28,13 @@ public class SwaggerConfig  {
 	 
 		private ApiInfo apiInfo() {
 	        return new ApiInfoBuilder()
-	                .title("Spring REST Sample with Swagger")
-	                .description("Spring REST Sample with Swagger")
+	                .title("K-Apps Ecommerce Reference Store")
+	                .description("Product Catalog Module")
 	                .termsOfServiceUrl("#")
 	                .contact(new Contact("Swamy Kunta", "", "swamy.kunta@gmail.com"))
 	                .license("##")
 	                .licenseUrl("https://github.com/s713278/ECommerce")
-	                .version("2.0")
+	                .version("1.0")
 	                .build();
 	    }
 		

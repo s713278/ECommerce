@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,25 +15,27 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="CATEGORY")
+@Table(name = "CATEGORY")
 public class Category {
- 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
- 
-   @NotNull(message = "Category name is required.")
-    @Basic(optional = false)
-    private String name;
- 
-    private String imageURL;
-    
-    @OneToMany(
-            cascade = CascadeType.ALL, 
-            orphanRemoval = true
-        )
-    private List<Product> products = new ArrayList<Product>();
-    
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@NotNull(message = "Category name is required.")
+	@Basic(optional = false)
+	@Column(name = "NAME")
+	private String name;
+
+	@Column(name = "IMAGE_URL")
+	private String imageURL;
+
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Product> products = new ArrayList<Product>();
+
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Category> subCategories = new ArrayList<Category>();
+
 	public Long getId() {
 		return id;
 	}
@@ -69,8 +72,8 @@ public class Category {
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
- 
-    // all arguments contructor 
-    // standard getters and setters
-    
+
+	// all arguments contructor
+	// standard getters and setters
+
 }
