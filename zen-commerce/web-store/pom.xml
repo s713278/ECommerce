@@ -8,7 +8,7 @@
 		<version>2.1.0.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.zensar</groupId>
+	<groupId>com.kapps</groupId>
 	<artifactId>web-store</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -58,13 +58,13 @@
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 
-		<!-- Start: Adding other module dependency <dependency> <groupId>com.zensar</groupId> 
+		<!-- Start: Adding other module dependency <dependency> <groupId>com.kapps</groupId> 
 			<artifactId>browse-shop</artifactId> <version>${zenVersion}</version> </dependency> 
 			End: Adding other module dependency -->
 			
 		<!-- Adding custom dependency -->
 		<dependency>
-			<groupId>com.zensar</groupId>
+			<groupId>com.kapps</groupId>
 			<artifactId>browse-shop</artifactId>
 			<version>1.0</version>
 			<scope>compile</scope>
