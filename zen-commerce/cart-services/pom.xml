@@ -4,7 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.zensar</groupId>
+	<groupId>com.kapps</groupId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<artifactId>cart-services</artifactId>
@@ -41,7 +41,7 @@
 
 		<!-- Adding custom dependency -->
 		<dependency>
-			<groupId>com.zensar</groupId>
+			<groupId>com.kapps</groupId>
 			<artifactId>browse-shop</artifactId>
 			<version>1.0</version>
 			<scope>compile</scope>
