@@ -10,7 +10,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.kapps.browse.dao.ProductDao;
-import com.kapps.browse.dto.Product;
+import com.kapps.browse.entity.Product;
 import com.kapps.browse.service.ProductService;
 
 @Service

@@ -11,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.kapps.browse.dao.CategoryDao;
-import com.kapps.browse.dto.Category;
+import com.kapps.browse.entity.Category;
 import com.kapps.browse.service.CategoryService;
 
 @Service

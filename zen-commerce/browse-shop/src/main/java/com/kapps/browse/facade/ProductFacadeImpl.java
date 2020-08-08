@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 
-import com.kapps.browse.dto.Category;
-import com.kapps.browse.dto.Product;
-import com.kapps.browse.dto.Sku;
+import com.kapps.browse.entity.Category;
+import com.kapps.browse.entity.Product;
+import com.kapps.browse.entity.Sku;
 import com.kapps.browse.service.CategoryService;
 import com.kapps.browse.service.ProductService;
 import com.kapps.browse.service.SkuService;

@@ -24,9 +24,9 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/api/category")
-public class CategoryController {
+public class CatalogController {
 	
-	private static final Logger LOGGER = 	LoggerFactory.getLogger(CategoryController.class);
+	private static final Logger LOGGER = 	LoggerFactory.getLogger(CatalogController.class);
 	 
 	@Autowired
 	private ProductFacade productFacade;

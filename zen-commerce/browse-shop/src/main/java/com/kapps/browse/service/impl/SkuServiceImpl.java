@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kapps.browse.dao.SkuDao;
-import com.kapps.browse.dto.Sku;
+import com.kapps.browse.entity.Sku;
 import com.kapps.browse.service.SkuService;
 
 @Service

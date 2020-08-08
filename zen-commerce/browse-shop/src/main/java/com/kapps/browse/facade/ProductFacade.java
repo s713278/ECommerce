@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.data.domain.Pageable;
 
-import com.kapps.browse.dto.Category;
-import com.kapps.browse.dto.Product;
-import com.kapps.browse.dto.Sku;
+import com.kapps.browse.entity.Category;
+import com.kapps.browse.entity.Product;
+import com.kapps.browse.entity.Sku;
 
 /**
  * 

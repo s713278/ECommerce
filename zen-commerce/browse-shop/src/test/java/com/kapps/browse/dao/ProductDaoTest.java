@@ -9,7 +9,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.kapps.browse.dao.ProductDao;
-import com.kapps.browse.dto.Product;
+import com.kapps.browse.entity.Product;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

@@ -1,4 +1,4 @@
-package com.kapps.browse.dto;
+package com.kapps.browse.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -36,6 +38,10 @@ public class Category {
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Category> subCategories = new ArrayList<Category>();
 
+
+	@Temporal(TemporalType.DATE)
+	private java.util.Date createdDate;
+	
 	public Long getId() {
 		return id;
 	}

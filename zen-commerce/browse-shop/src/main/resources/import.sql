@@ -1,15 +1,15 @@
 ---------------------------------------------------------------------------------------
 --- CATALOG 
 ---------------------------------------------------------------------------------------
-INSERT INTO CATALOG (id, name) VALUES (1, 'Sri Sai Dry-Fruits Store');
+INSERT INTO SERVICE_PROVIDER (id, name) VALUES (1, 'Sri Sai Dry-Fruits Store');
 
 ---------------------------------------------------------------------------------------
 --- CATEGORIES
 ---------------------------------------------------------------------------------------
 INSERT INTO CATEGORY (id, name) VALUES (1, 'Dry Fruits , Nuts & Seeds');
-INSERT INTO CATEGORY (id, name) VALUES (2, 'Biscuits , Cerals & Chips');
-INSERT INTO CATEGORY (id, name) VALUES (3, 'Healthy Evening Snacks');
-INSERT INTO CATEGORY (id, name) VALUES (4, 'Organic Healthy Snacks');
+INSERT INTO CATEGORY (id, name) VALUES (2, 'Milk & Supply');
+INSERT INTO CATEGORY (id, name) VALUES (3, 'Fruits & Vegtables');
+INSERT INTO CATEGORY (id, name) VALUES (4, '');
 INSERT INTO CATEGORY (id, name) VALUES (5, 'Dry Fruits Gifting');
 INSERT INTO CATEGORY (id, name) VALUES (11, 'Almonds');
 INSERT INTO CATEGORY (id, name) VALUES (12, 'Cashews(Kaju)');

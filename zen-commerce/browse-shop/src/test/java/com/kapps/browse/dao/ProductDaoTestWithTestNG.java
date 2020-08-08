@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import com.kapps.BnSApplication;
 import com.kapps.browse.dao.ProductDao;
-import com.kapps.browse.dto.Product;
+import com.kapps.browse.entity.Product;
 
 
 @SpringBootTest(classes=BnSApplication.class)

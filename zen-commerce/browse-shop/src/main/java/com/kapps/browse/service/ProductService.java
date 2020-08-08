@@ -2,7 +2,7 @@ package com.kapps.browse.service;
 
 import java.util.List;
 
-import com.kapps.browse.dto.Product;
+import com.kapps.browse.entity.Product;
 
 public interface ProductService {
 

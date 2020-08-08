@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kapps.browse.dto.Product;
-import com.kapps.browse.dto.Sku;
+import com.kapps.browse.entity.Product;
+import com.kapps.browse.entity.Sku;
 import com.kapps.browse.facade.ProductFacade;
 
 import io.swagger.annotations.ApiOperation;

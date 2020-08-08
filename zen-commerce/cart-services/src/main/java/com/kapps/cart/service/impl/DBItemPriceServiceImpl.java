@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kapps.browse.dao.SkuDao;
-import com.kapps.browse.dto.Sku;
+import com.kapps.browse.entity.Sku;
 import com.kapps.cart.service.ItemPriceService;
 
 /**
@@ -27,7 +27,7 @@ public class DBItemPriceServiceImpl implements ItemPriceService {
 		Map<String, Double> result = new ConcurrentHashMap<String, Double>();
 		if(skuDao.findById(skuId).isPresent()) {
 			Sku sku =skuDao.findById(skuId).get();
-			result.put(skuId, sku.getPrice());
+			result.put(skuId, 10.00d);
 		}else {
 			result.put(skuId, 90d);
 		}

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.kapps.browse.dto.Product;
+import com.kapps.browse.entity.Product;
 
 public interface ProductDao extends PagingAndSortingRepository<Product, Long>  {
 

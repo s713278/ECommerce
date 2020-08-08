@@ -1,4 +1,4 @@
-package com.kapps.browse.dto;
+package com.kapps.browse.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -30,6 +32,9 @@ public class Product {
     private String name;
  
     private String imageURL;
+
+	@Temporal(TemporalType.DATE)
+	private java.util.Date createdDate;
     
     @OneToMany(
             cascade = CascadeType.ALL, 

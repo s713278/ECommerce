@@ -1,4 +1,4 @@
-package com.kapps.browse.dto;
+package com.kapps.browse.entity;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -16,16 +16,13 @@ public class Sku {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
  
-   @NotNull(message = "SKu name is required.")
+   @NotNull(message = "Sku name is required.")
     @Basic(optional = false)
     private String name;
  
-    private Double price;
  
     private String imageURL;
     
-    
-
 	public Long getId() {
 		return id;
 	}
@@ -40,14 +37,6 @@ public class Sku {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Double getPrice() {
-		return price;
-	}
-
-	public void setPrice(Double price) {
-		this.price = price;
 	}
 
 	public String getImageURL() {
